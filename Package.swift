@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "TianQuotation",
+    defaultLocalization: "en",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -20,9 +21,14 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "TianQuotation",
-            dependencies: []),
+            dependencies: [],
+            resources: [
+                .process("Resources/MorningQuotation.json"),
+            ]
+        ),
         .testTarget(
             name: "TianQuotationTests",
-            dependencies: ["TianQuotation"]),
+            dependencies: ["TianQuotation"]
+        ),
     ]
 )
