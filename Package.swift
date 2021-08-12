@@ -23,6 +23,7 @@ let package = Package(
             name: "TianQuotation",
             dependencies: [],
             resources: [
+                .process("Memos.md"),
                 .process("Resources/MorningQuotation.json"),
             ]
         ),

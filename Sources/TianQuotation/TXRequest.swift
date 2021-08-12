@@ -157,7 +157,6 @@ extension TXRequest {
             NSLog("Error exists when saving data to local. Error: %@", error.localizedDescription)
             throw error
         }
-        
     }
     
     /// Read some content from local, URL of `<CYRequest.localContentUrl>/<CYCoordinate.urlString>`.
